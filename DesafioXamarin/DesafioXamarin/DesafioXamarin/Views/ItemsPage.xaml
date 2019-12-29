@@ -12,6 +12,12 @@
         <ToolbarItem Text="Próxima" Clicked="AddItem_Clicked" />
     </ContentPage.ToolbarItems>
 
-    <ListView x:Name="lv1"/>
+    <ListView x:Name="lvCustomers" VerticalOptions="Center" HorizontalOptions="Center">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Name}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 
 </ContentPage>

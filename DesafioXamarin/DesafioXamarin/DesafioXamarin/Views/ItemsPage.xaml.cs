@@ -10,6 +10,7 @@ using Xamarin.Forms.Xaml;
 using DesafioXamarin.Models;
 using DesafioXamarin.Views;
 using DesafioXamarin.ViewModels;
+using System.Net.Http;
 
 namespace DesafioXamarin.Views
 {
@@ -23,12 +24,14 @@ namespace DesafioXamarin.Views
         {
             InitializeComponent();
 
+            
+
             List<String> lista = new List<string>()
             {
-                "Flamengo","Grêmio","Palmeiras","Athletico","Atlético","Botafogo","Fluminense","Vasco"
+                "Flamengo","Grêmio","Palmeiras","Athletico","Atlético","Botafogo","Fluminense","Vasco",s
             };
 
-            lv1.ItemsSource = lista;
+            lvCustomers.ItemsSource = lista;
         }
 
 
@@ -36,6 +39,8 @@ namespace DesafioXamarin.Views
         {
             await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
         }
+
+       
 
 
     }
