@@ -8,9 +8,7 @@
              Title="{Binding Title}"
              x:Name="BrowseItemsPage">
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Próxima" Clicked="AddItem_Clicked" />
-    </ContentPage.ToolbarItems>
+   
 
     <StackLayout Orientation="Vertical">
         <SearchBar x:Name="sbProcurar" Placeholder="Procurar..." TextChanged="Procurar_TextChanged"/>

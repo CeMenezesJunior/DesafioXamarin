@@ -7,7 +7,9 @@
             xmlns:views="clr-namespace:DesafioXamarin.Views"
             x:Class="DesafioXamarin.Views.NewItemPage">
 
-<TabbedPage.Children>
+    
+
+    <TabbedPage.Children>
     <NavigationPage Title="Pagina 2">
         <NavigationPage.Icon>
             <OnPlatform x:TypeArguments="FileImageSource">

@@ -34,10 +34,7 @@ namespace DesafioXamarin.Views
         }
 
 
-        async void AddItem_Clicked(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private async Task<List<Record>> LerAPI()
         {
