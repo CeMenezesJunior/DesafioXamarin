@@ -13,3 +13,4 @@ C:\Users\edu_j\Documents\DesafioXamarin\DesafioXamarin\DesafioXamarin\DesafioXam
 C:\Users\edu_j\Documents\DesafioXamarin\DesafioXamarin\DesafioXamarin\DesafioXamarin\obj\Debug\netstandard2.0\ref\DesafioXamarin.dll
 C:\Users\edu_j\Documents\DesafioXamarin\DesafioXamarin\DesafioXamarin\DesafioXamarin\obj\Debug\netstandard2.0\DesafioXamarin.pdb
 C:\Users\edu_j\Documents\DesafioXamarin\DesafioXamarin\DesafioXamarin\DesafioXamarin\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\edu_j\Documents\DesafioXamarin\DesafioXamarin\DesafioXamarin\DesafioXamarin\obj\Debug\netstandard2.0\Views\ItemsPage2.xaml.g.cs
