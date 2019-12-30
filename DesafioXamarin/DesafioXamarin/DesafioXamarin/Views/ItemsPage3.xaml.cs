@@ -56,6 +56,7 @@ namespace DesafioXamarin.Views
 
         async void Botao_Clicado(object sender, EventArgs args)
         {
+            repositorio.DeleteAllEstados();
             foreach(Record r in items)
             {
                 estado.Nome = r.fields.Estado;

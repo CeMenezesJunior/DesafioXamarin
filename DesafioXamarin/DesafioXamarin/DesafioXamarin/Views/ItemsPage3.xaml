@@ -9,7 +9,7 @@
              x:Name="BrowseItemsPage">
   <ContentPage.Content>
         <StackLayout>
-            <Button Text="Envia" Clicked="Botao_Clicado"/>
+            <Button Text="Grava" Clicked="Botao_Clicado"/>
             <ListView x:Name="estadosBd">
                 <ListView.ItemTemplate>
                     <DataTemplate>

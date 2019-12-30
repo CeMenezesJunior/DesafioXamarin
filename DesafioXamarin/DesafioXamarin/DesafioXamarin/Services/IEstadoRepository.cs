@@ -9,5 +9,6 @@ namespace DesafioXamarin.Services
     {
         List<Note> GetAllEstadosData();
         void InsertEstado(Note estado);
+        void DeleteAllEstados();
     }
 }

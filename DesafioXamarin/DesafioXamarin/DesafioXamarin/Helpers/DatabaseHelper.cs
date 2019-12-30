@@ -36,8 +36,12 @@ namespace DesafioXamarin.Helpers
         {
             sqliteconnection.Insert(estado);
         }
-        // Atualizar dados
-       
+        public void DeleteAllEstados()
+        {
+            sqliteconnection.DeleteAll<Note>();
+        }
+        
+
     }
 }
     

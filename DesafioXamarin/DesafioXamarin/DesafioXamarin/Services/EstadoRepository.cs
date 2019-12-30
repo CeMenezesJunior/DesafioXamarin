@@ -13,6 +13,12 @@ namespace DesafioXamarin.Services
         {
             _databaseHelper = new DatabaseHelper();
         }
+
+        public void DeleteAllEstados()
+        {
+            _databaseHelper.DeleteAllEstados();
+        }
+
         public List<Note> GetAllEstadosData()
         {
            return _databaseHelper.GetAllEstadosData();
