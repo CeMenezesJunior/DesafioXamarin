@@ -11,6 +11,11 @@ using DesafioXamarin.Models;
 using DesafioXamarin.Views;
 using DesafioXamarin.ViewModels;
 using System.Net.Http;
+using Newtonsoft.Json;
+using DesafioXamarin.Deserialize;
+using DesafioXamarin.Services;
+using System.Collections.ObjectModel;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DesafioXamarin.Views
 {
@@ -19,19 +24,13 @@ namespace DesafioXamarin.Views
     [DesignTimeVisible(false)]
     public partial class ItemsPage : ContentPage
     {
+        List<Record> items;
 
         public ItemsPage()
         {
             InitializeComponent();
+            AtualizaDados();
 
-            
-
-            List<String> lista = new List<string>()
-            {
-                "Flamengo","Grêmio","Palmeiras","Athletico","Atlético","Botafogo","Fluminense","Vasco",s
-            };
-
-            lvCustomers.ItemsSource = lista;
         }
 
 
@@ -40,8 +39,43 @@ namespace DesafioXamarin.Views
             await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
         }
 
-       
+        private async Task<List<Record>> LerAPI()
+        {
+            HttpClient cliente = new HttpClient();
+            var resposta = await cliente.GetStringAsync("https://api.airtable.com/v0/app0RCW0xYP8RT3U9/Estados?api_key=keyhS9s7U3bGKSuml");
+            var estados = JsonConvert.DeserializeObject<Estados>(resposta);
+            var teste = estados.records;
+            return teste;
+        }
+
+        private async void AtualizaDados()
+        {
+            items = await LerAPI();
+            estadosLista.ItemsSource = Listar();
+           
+        }
+
+        private void Procurar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            estadosLista.ItemsSource = this.Listar(this.sbProcurar.Text);
+        }
+
+        public IEnumerable<Agrupar<string, Record>> Listar(string filtro = "")
+        {
+
+            IEnumerable<Record> estadosFiltrados = this.items;
+            if (!string.IsNullOrEmpty(filtro))
+            {
+                estadosFiltrados = items.Where(l => (l.fields.Estado.ToLower().Contains(filtro.ToLower())) || (l.fields.Capital.ToLower().Contains(filtro.ToLower())));
+            }
+            return from estados in estadosFiltrados
+                   orderby estados.fields.Estado
+                   group estados by estados.fields.Estado into grupos
+                   select new Agrupar<string, Record>(grupos.Key, grupos);
+                   
 
 
+        }
+        
     }
 }

@@ -12,12 +12,33 @@
         <ToolbarItem Text="Próxima" Clicked="AddItem_Clicked" />
     </ContentPage.ToolbarItems>
 
-    <ListView x:Name="lvCustomers" VerticalOptions="Center" HorizontalOptions="Center">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding Name}" />
-            </DataTemplate>
-        </ListView.ItemTemplate>
+    <StackLayout Orientation="Vertical">
+        <SearchBar x:Name="sbProcurar" Placeholder="Procurar..." TextChanged="Procurar_TextChanged"/>
+    <ListView x:Name="estadosLista" Margin="10"
+                  HasUnevenRows="True" 
+                  IsGroupingEnabled="True"
+                  GroupDisplayBinding="{Binding .}"
+                  SeparatorVisibility="Default" 
+                  SeparatorColor="Black">
+                    <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="#eee"
+                                    Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding fields.Attachments[0].thumbnails.small.url}" />
+                                <Label Text="{Binding fields.Estado}"
+                                            TextColor="#f35e20" />
+                                <Label Text="{Binding fields.Capital}"
+                                            TextColor="#503026" />
+                                <Label Text="{Binding fields.Sigla}"
+                                       TextColor="Blue"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
     </ListView>
-
+    </StackLayout>
+        
 </ContentPage>

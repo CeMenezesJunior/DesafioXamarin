@@ -4,7 +4,11 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "DesafioXamarin.Android.dll" comes first in this list. */
 		"DesafioXamarin.Android.dll",
 		"DesafioXamarin.dll",
+		"Emby.ApiClient.dll",
 		"FormsViewGroup.dll",
+		"MediaBrowser.Common.dll",
+		"MediaBrowser.Model.dll",
+		"Newtonsoft.Json.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
 		"Xamarin.Android.Arch.Lifecycle.Common.dll",
