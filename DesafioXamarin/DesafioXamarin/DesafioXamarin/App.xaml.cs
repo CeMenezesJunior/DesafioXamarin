@@ -13,7 +13,7 @@ namespace DesafioXamarin
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+            
             MainPage = new MainPage();
         }
 

@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using DesafioXamarin.Models;
 using DesafioXamarin.Services;
 
+
 namespace DesafioXamarin.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
