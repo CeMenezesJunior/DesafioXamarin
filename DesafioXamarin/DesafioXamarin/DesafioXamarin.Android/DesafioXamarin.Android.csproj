@@ -15,7 +15,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -87,7 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DesafioXamarin\DesafioXamarin.csproj">
-      <Project>{17F5876D-21B0-4272-BB2B-C1F70FC7BD7B}</Project>
+      <Project>{1E70EBF5-3AC5-40B9-9685-C714BEF20178}</Project>
       <Name>DesafioXamarin</Name>
     </ProjectReference>
   </ItemGroup>
